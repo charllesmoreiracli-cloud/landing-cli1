@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CLI Soluções e Confiabilidade</title>
+  
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ8MGE6WVM"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,113 +15,130 @@
   
   <style>
     body {
-      font-family: Arial, sans-serif; 
+      font-family: 'Segoe UI', Arial, sans-serif; 
       margin: 0; padding: 0; 
       background: url('https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/ImagemdeFundo.png') no-repeat center center fixed; 
       background-size: cover; 
       color: #333;
+      line-height: 1.6;
     }
 
+    /* Cabeçalho */
     header {
       background: rgba(0, 91, 153, 0.95); 
       color: white; 
-      padding: 40px 20px; 
+      padding: 30px 20px; 
       text-align: center;
     }
 
-    /* Ajuste da Logo e Efeitos */
     header img {
-      max-height: 80px; /* Tamanho reduzido para melhor estética */
+      max-height: 70px; 
       width: auto;
-      display: block;
-      margin: 0 auto 15px;
-      animation: fadeInZoom 1.5s ease-in-out, pulse 4s infinite ease-in-out;
+      margin-bottom: 15px;
+      animation: fadeInZoom 1.2s ease-out, pulse 4s infinite ease-in-out;
     }
 
     @keyframes fadeInZoom {
-      0% { opacity: 0; transform: scale(0.7); }
+      0% { opacity: 0; transform: scale(0.8); }
       100% { opacity: 1; transform: scale(1); }
     }
 
     @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.03); }
-      100% { transform: scale(1); }
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
     }
 
-    header h1 { margin: 10px 0; font-size: 1.8em; max-width: 800px; margin: auto; }
-    
-    .container { 
-      display: flex; 
-      justify-content: space-between; 
-      flex-wrap: wrap; 
-      padding: 40px; 
-      max-width: 1200px; 
-      margin: auto; 
+    /* Seção de Imagens (Produtos) */
+    .gallery {
+      background: #fff;
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: 30px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
-    .content { flex: 1; min-width: 300px; }
+    .gallery h2 { text-align: center; color: #005b99; margin-bottom: 30px; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .gallery img:hover { transform: scale(1.03); }
+
+    /* Seção do Formulário (Abaixo das imagens) */
+    .form-section {
+      max-width: 1100px;
+      margin: 30px auto;
+      display: flex;
+      justify-content: center;
+    }
 
     .form-box { 
       background: white; 
-      padding: 30px; 
-      border-radius: 8px; 
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+      padding: 40px; 
+      border-radius: 12px; 
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2); 
       width: 100%; 
-      max-width: 400px; 
-      margin: 20px auto; 
+      max-width: 500px;
+      text-align: center;
     }
+
+    .form-box h2 { color: #005b99; margin-top: 0; }
 
     form input {
       width: 100%; 
-      padding: 12px; 
-      margin: 10px 0; 
-      border: 1px solid #ccc; 
-      border-radius: 4px;
+      padding: 14px; 
+      margin: 12px 0; 
+      border: 1px solid #ddd; 
+      border-radius: 6px;
+      font-size: 16px;
       box-sizing: border-box;
     }
 
     form button {
       width: 100%; 
-      padding: 12px; 
+      padding: 15px; 
       background: #005b99; 
       color: white; 
       border: none; 
-      border-radius: 4px; 
+      border-radius: 6px; 
       cursor: pointer; 
       font-weight: bold; 
-      font-size: 1em;
+      font-size: 1.1em;
+      transition: background 0.3s;
     }
 
     form button:hover { background: #004477; }
 
-    .gallery { background: #fff; padding: 40px; max-width: 1200px; margin: 20px auto; border-radius: 8px; }
-    .gallery-grid { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; }
-    .gallery img { max-width: 300px; width: 100%; border-radius: 8px; transition: 0.3s; }
-    .gallery img:hover { transform: translateY(-5px); }
-
-    .benefits, .differentials { background: #fff; padding: 40px; margin: 20px auto; max-width: 1200px; border-radius: 8px; }
-    .benefit-items { display: flex; justify-content: space-around; flex-wrap: wrap; }
-    .benefit { flex: 1; min-width: 250px; padding: 20px; text-align: center; font-weight: bold; }
-
-    .cta-final { background: #005b99; color: white; text-align: center; padding: 60px 20px; }
-    .cta-final button { 
-      padding: 15px 40px; 
-      font-size: 1.2em; 
-      border: none; 
-      border-radius: 5px; 
-      background: #ffcc00; 
-      color: #333; 
-      cursor: pointer; 
-      font-weight: bold; 
-      transition: 0.3s;
+    /* Benefícios e Diferenciais */
+    .info-section {
+      background: #fff; 
+      padding: 40px; 
+      margin: 30px auto; 
+      max-width: 1100px; 
+      border-radius: 12px;
     }
-    .cta-final button:hover { background: #e6b800; transform: scale(1.05); }
 
+    .benefit-items { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; }
+    .benefit { flex: 1; min-width: 200px; text-align: center; padding: 15px; font-weight: bold; color: #005b99; }
+
+    /* Rodapé */
     footer { background: #222; color: white; text-align: center; padding: 40px 20px; }
-    footer a { color: #ffcc00; text-decoration: none; margin: 0 10px; }
-    
-    /* Push Up Estilizado */
+    footer a { color: #ffcc00; text-decoration: none; font-weight: bold; }
+
+    /* Push Up */
     #pushup {
       display: none; 
       position: fixed; 
@@ -132,7 +150,6 @@
       box-shadow: 0 5px 20px rgba(0,0,0,0.4); 
       padding: 15px; 
       z-index: 9999;
-      border: 1px solid #eee;
     }
   </style>
 </head>
@@ -140,82 +157,54 @@
 
   <header>
     <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/CLI%20ENGENHARIA-07.png" alt="Logo CLI">
-    <h1>Aumente a Confiabilidade dos seus equipamentos com soluções de Lubrificação Industrial sob medida.</h1>
-    <p>Há mais de 10 anos ajudando indústrias a reduzir falhas e aumentar produtividade.</p>
+    <h1>Confiabilidade em Lubrificação Industrial</h1>
+    <p>Reduza custos e aumente a vida útil dos seus equipamentos com quem entende do assunto.</p>
   </header>
 
-  <div class="container">
-    <div class="content">
-      <section class="gallery">
-        <h2 style="text-align:center;">Conheça nossos Produtos e Serviços</h2>
-        <div class="gallery-grid">
-          <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Lubri%20A%20IA.png" alt="Lubrificador Automático">
-          <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Respiro%20Vertical%20IA.png" alt="Respiros Dessacantes">
-          <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Filtro%20Vertical%20IA.png" alt="Elementos Filtrantes">
-        </div>
-      </section>
+  <section class="gallery">
+    <h2>Nossas Soluções em Destaque</h2>
+    <div class="gallery-grid">
+      <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Lubri%20A%20IA.png" alt="Lubrificador Automático">
+      <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Respiro%20Vertical%20IA.png" alt="Respiros Dessacantes">
+      <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Filtro%20Vertical%20IA.png" alt="Elementos Filtrantes">
     </div>
+  </section>
 
+  <section class="form-section">
     <div class="form-box">
-      <h3 style="text-align:center; margin-top:0;">Solicite um contato especializado</h3>
+      <h2>Solicite um contato especializado</h2>
+      <p>Nossa equipe técnica entrará em contato para entender sua necessidade.</p>
       <form action="https://docs.google.com/forms/d/e/1FAIpQLSdMcjiSddjTUo20uT3bOToisVTo9KaQlFR5LXiM1Ax1LBUizQ/formResponse" method="POST" target="_blank">
-        <input type="text" name="entry.123456789" placeholder="Seu Nome" required> <button type="submit">Quero ser contatado</button>
+        <input type="text" name="entry.123456789" placeholder="Seu nome completo" required>
+        <button type="submit">Quero ser contatado agora</button>
       </form>
-      <p style="font-size: 0.8em; text-align: center; color: #777; margin-top: 10px;">Suas informações estão seguras conosco.</p>
     </div>
-  </div>
+  </section>
 
-  <section class="benefits">
-    <h2 style="text-align:center;">Benefícios</h2>
+  <section class="info-section">
     <div class="benefit-items">
-      <div class="benefit">💰 Redução de Custos de Manutenção</div>
-      <div class="benefit">✅ Confiabilidade comprovada</div>
-      <div class="benefit">⚙️ Tecnologia Indústria 4.0</div>
+      <div class="benefit">💰 Economia Operacional</div>
+      <div class="benefit">✅ Performance Garantida</div>
+      <div class="benefit">⚙️ Tecnologia 4.0</div>
     </div>
-  </section>
-
-  <section class="differentials">
-    <h2 style="text-align:center;">Nossos Diferenciais</h2>
-    <ul style="max-width: 800px; margin: auto; line-height: 1.6;">
-      <li><strong>Equipe técnica altamente capacitada:</strong> Profissionais focados em resultados.</li>
-      <li><strong>Soluções personalizadas:</strong> Estratégias sob medida para sua planta.</li>
-      <li><strong>Monitoramento inteligente:</strong> Prevenção de falhas com tecnologia.</li>
-    </ul>
-  </section>
-
-  <section class="cta-final">
-    <h2>Garanta mais Confiabilidade para sua operação</h2>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdMcjiSddjTUo20uT3bOToisVTo9KaQlFR5LXiM1Ax1LBUizQ/formResponse" method="POST" target="_blank">
-      <button type="submit">Fale agora com um especialista CLI</button>
-    </form>
   </section>
 
   <footer>
-    <p>📞 (31) 3939-6282 | 📱 (31) 97247-6693</p>
-    <p>✉️ charlles.moreira@clisolucoes.com.br</p>
+    <p>📞 (31) 3939-6282 | (31) 97247-6693</p>
     <p>📍 Conselheiro Lafaiete - MG</p>
     <div style="margin: 20px 0;">
-      <a href="https://www.clisolucoes.com.br/">Site Oficial</a> | 
-      <a href="https://www.linkedin.com/company/clisolucoes/">LinkedIn</a>
+      <a href="https://wa.me/5531972476693" target="_blank" style="background:#25D366; color:white; padding:12px 20px; border-radius:30px; display:inline-block;">
+        Falar pelo WhatsApp
+      </a>
     </div>
-    <a href="https://wa.me/5531972476693" target="_blank" style="background:#25D366; color:white; padding:10px 20px; border-radius:5px; font-weight:bold; display:inline-block;">
-      💬 Fale pelo WhatsApp
-    </a>
   </footer>
 
   <div id="pushup">
     <span onclick="document.getElementById('pushup').style.display='none'; sessionStorage.setItem('pushupClosed','true');" 
           style="position:absolute; top:5px; right:10px; cursor:pointer; font-weight:bold; color:#999;">✕</span>
-    
     <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/main/WhatsApp%20Image%202026-03-16%20at%2014.34.25.jpeg" alt="Novo Produto" style="width:100%; border-radius:5px; margin-bottom:10px;">
-    
-    <p style="font-size:0.9em; margin-bottom:10px; text-align:center;"><strong>Novidade na CLI!</strong> Conheça nossa nova solução.</p>
-    
-    <a href="https://wa.me/5531972476693?text=Olá%20CLI%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20novo%20produto." 
-       target="_blank" 
-       style="display:block; text-align:center; background:#005b99; color:white; padding:10px; border-radius:5px; font-weight:bold; text-decoration:none; font-size:0.9em;">
-       Ver Detalhes
-    </a>
+    <p style="font-size:0.85em; text-align:center; margin-bottom:10px;">Conheça nossa nova linha de produtos!</p>
+    <a href="https://wa.me/5531972476693" target="_blank" style="display:block; text-align:center; background:#005b99; color:white; padding:10px; border-radius:5px; text-decoration:none; font-weight:bold; font-size:0.9em;">Saiba Mais</a>
   </div>
 
   <script>
@@ -223,13 +212,12 @@
       if (!sessionStorage.getItem('pushupClosed')) {
         setTimeout(function() {
           document.getElementById('pushup').style.display = 'block';
-        }, 3000); // Aparece após 3 segundos
+        }, 3000);
       }
     };
   </script>
 </body>
 </html>
-
 
 
 
