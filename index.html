@@ -20,33 +20,18 @@
       background: url('https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/ImagemdeFundo.png') no-repeat center center fixed; 
       background-size: cover; 
       color: #333;
-      line-height: 1.6;
-    }
-
+      line-height: 1.6;    }
     /* Cabeçalho */
     header {
       background: rgba(0, 91, 153, 0.95); 
       color: white; 
       padding: 30px 20px; 
-      text-align: center;
-    }
+      text-align: center;    }
+    header img {      max-height: 70px;       width: auto;      margin-bottom: 15px;      animation: fadeInZoom 1.2s ease-out, pulse 4s infinite ease-in-out;    }
 
-    header img {
-      max-height: 70px; 
-      width: auto;
-      margin-bottom: 15px;
-      animation: fadeInZoom 1.2s ease-out, pulse 4s infinite ease-in-out;
-    }
+    @keyframes fadeInZoom {      0% { opacity: 0; transform: scale(0.8); }      100% { opacity: 1; transform: scale(1); }    }
 
-    @keyframes fadeInZoom {
-      0% { opacity: 0; transform: scale(0.8); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
+    @keyframes pulse {      0%, 100% { transform: scale(1); }      50% { transform: scale(1.05); }    }
 
     /* Seção de Imagens (Produtos) */
     .gallery {
@@ -55,24 +40,13 @@
       max-width: 1100px;
       margin: 30px auto;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);    }
 
     .gallery h2 { text-align: center; color: #005b99; margin-bottom: 30px; }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      justify-items: center;
-    }
+    .gallery-grid {      display: grid;      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));      gap: 20px;      justify-items: center;    }
 
-    .gallery img {
-      width: 100%;
-      max-width: 320px;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    .gallery img {      width: 100%;      max-width: 320px;      border-radius: 8px;      transition: transform 0.3s ease;      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     .gallery img:hover { transform: scale(1.03); }
@@ -82,18 +56,9 @@
       max-width: 1100px;
       margin: 30px auto;
       display: flex;
-      justify-content: center;
-    }
+      justify-content: center;    }
 
-    .form-box { 
-      background: white; 
-      padding: 40px; 
-      border-radius: 12px; 
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2); 
-      width: 100%; 
-      max-width: 500px;
-      text-align: center;
-    }
+    .form-box {      background: white;       padding: 40px;       border-radius: 12px;       box-shadow: 0 8px 25px rgba(0,0,0,0.2);       width: 100%;       max-width: 500px;      text-align: center;    }
 
     .form-box h2 { color: #005b99; margin-top: 0; }
 
