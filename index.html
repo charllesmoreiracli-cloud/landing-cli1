@@ -10,34 +10,14 @@
     header img {header img {
   max-height: 220px;   /* aumenta o tamanho */
   width: auto;         /* mantém proporcionalidade */
-  animation: fadeInZoom 2s ease-in-out, pulse 4s infinite ease-in-out;
-}
+  animation: fadeInZoom 2s ease-in-out, pulse 4s infinite ease-in-out;}
 
-/* Animação de entrada */
-@keyframes fadeInZoom {
-  0% {
-    opacity: 0;
-    transform: scale(0.7);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+/* Animação de entrada */@keyframes fadeInZoom {  0% {    opacity: 0;
+    transform: scale(0.7);  }  100% {    opacity: 1;    transform: scale(1);  }}
 
 /* Animação contínua de pulso */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05); /* cresce levemente */
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-}
+@keyframes pulse {  0% {    transform: scale(1);  }  50% {    transform: scale(1.05); /* cresce levemente */  }
+  100% {    transform: scale(1); }}}
     header h1 {margin:10px 0 0; font-size:1.5em;}
     .container {display:flex; justify-content:space-between; flex-wrap:wrap; padding:40px; max-width:1200px; margin:auto;}
     .content {flex:1; min-width:300px; margin-right:20px;}
@@ -141,6 +121,7 @@
     <span onclick="document.getElementById('pushup').style.display='none'; sessionStorage.setItem('pushupClosed','true');" 
           style="position:absolute; top:8px; right:12px; cursor:pointer; font-weight:bold; font-size:18px;">✖</span>
     <img src="<img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/main/WhatsApp%20Image%202026-03-16%20at%2014.34.25.jpeg" alt="Novo Produto" style="width:100%; border-radius:5px; margin-bottom:10px;">
+" alt="Novo Produto" style="width:100%; border-radius:5px; margin-bottom:10px;">
 " alt="Novo Produto" style="width:100%; border-radius:5px; margin-bottom:10px;">
     <a href="https://wa.me/5531972476693?text=Olá%20CLI%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20novo%20produto." 
        target="_blank" 
