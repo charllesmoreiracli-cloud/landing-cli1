@@ -106,6 +106,46 @@
 </div>
 
   </footer>
+  ...
+  <!-- Rodapé -->
+  <footer>
+    <p>📞 Telefone: (31) 3939-6282 | 📱 WhatsApp: (31) 97247-6693 | ✉️ Email: charlles.moreira@clisolucoes.com.br</p>
+    <p>📍 Conselheiro Lafaiete MG</p>
+    <p>
+      <a href="https://www.clisolucoes.com.br/">Site</a> | 
+      <a href="https://www.linkedin.com/company/clisolucoes/?viewAsMember=true">LinkedIn</a> 
+    </p>
+    <div style="text-align:center; margin-top:20px;">
+      <a href="https://wa.me/5531972476693?text=Olá%20CLI%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20de%20lubrificação%20industrial." target="_blank" style="display:inline-block; background:#25D366; color:white; padding:12px 24px; border-radius:5px; font-weight:bold; text-decoration:none; font-size:1em;">
+        💬 Fale pelo WhatsApp
+      </a>
+    </div>
+  </footer>
+
+  <!-- Push Up Produto Novo -->
+  <div id="pushup" style="display:none; position:fixed; bottom:20px; right:20px; width:300px; background:#fff; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.3); padding:15px; z-index:9999;">
+    <span onclick="document.getElementById('pushup').style.display='none'; sessionStorage.setItem('pushupClosed','true');" 
+          style="position:absolute; top:8px; right:12px; cursor:pointer; font-weight:bold; font-size:18px;">✖</span>
+    <img src="URL_DA_IMAGEM_DO_PRODUTO" alt="Novo Produto" style="width:100%; border-radius:5px; margin-bottom:10px;">
+    <a href="https://wa.me/5531972476693?text=Olá%20CLI%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20novo%20produto." 
+       target="_blank" 
+       style="display:block; text-align:center; background:#005b99; color:white; padding:10px; border-radius:5px; font-weight:bold; text-decoration:none;">
+       Fale com um especialista
+    </a>
+  </div>
+
+  <!-- Script para exibir automaticamente uma vez por sessão -->
+  <script>
+    window.onload = function() {
+      if (!sessionStorage.getItem('pushupClosed')) {
+        setTimeout(function() {
+          document.getElementById('pushup').style.display = 'block';
+        }, 5000); // aparece após 5 segundos
+      }
+    };
+  </script>
+</body>
+</html>
 
 </body>
 </html>
