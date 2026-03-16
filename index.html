@@ -4,96 +4,185 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CLI Soluções e Confiabilidade</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ8MGE6WVM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RQ8MGE6WVM');
+  </script>
+  
   <style>
-    body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: url('https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/ImagemdeFundo.png') no-repeat center center fixed; background-size: cover; color: #333;}
-    header {background:#005b99; color:white; padding:60px; text-align:center;}
-    header img {header img {
-  max-height: 120px;   /* aumenta o tamanho */
-  width: auto;         /* mantém proporcionalidade */
-  animation: fadeInZoom 2s ease-in-out, pulse 4s infinite ease-in-out;}
+    body {
+      font-family: Arial, sans-serif; 
+      margin: 0; padding: 0; 
+      background: url('https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/ImagemdeFundo.png') no-repeat center center fixed; 
+      background-size: cover; 
+      color: #333;
+    }
 
-/* Animação de entrada */@keyframes fadeInZoom {  0% {    opacity: 0;
-    transform: scale(0.7);  }  100% {    opacity: 1;    transform: scale(1);  }}
+    header {
+      background: rgba(0, 91, 153, 0.95); 
+      color: white; 
+      padding: 40px 20px; 
+      text-align: center;
+    }
 
-/* Animação contínua de pulso */
-@keyframes pulse {  0% {    transform: scale(1);  }  50% {    transform: scale(1.05); /* cresce levemente */  }
-  100% {    transform: scale(1); }}}
-    header h1 {margin:10px 0 0; font-size:1.5em;}
-    .container {display:flex; justify-content:space-between; flex-wrap:wrap; padding:40px; max-width:1200px; margin:auto;}
-    .content {flex:1; min-width:300px; margin-right:20px;}
-    .form-box { background: white; padding: 32px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); width: 400px; /* define largura fixa */ margin: auto; /* centraliza */}
-    form input, form button form input, form button {width: 100%; padding: 8px; margin: 6px 0; font-size: 0.9em;}
-    form button {background:#005b99; color:white; border:none; cursor:pointer; font-weight:bold;}
-    form button:hover {background:#004477;}
-    .benefits, .differentials {background:#fff; padding:40px; margin:20px auto; max-width:1200px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.05);}
-    .benefits h2, .differentials h2 {text-align:center; margin-bottom:20px;}
-    .benefit-items {display:flex; justify-content:space-around; flex-wrap:wrap;}
-    .benefit {flex:1; min-width:200px; padding:20px; text-align:center;}
-    .cta-final {background:#005b99; color:white; text-align:center; padding:40px;}
-    .cta-final button {padding:15px 30px; font-size:1.1em; border:none; border-radius:5px; background:#ffcc00; cursor:pointer; font-weight:bold;}
-    .cta-final button:hover {background:#e6b800;}
-    footer {background:#333; color:white; text-align:center; padding:20px;}
-    footer a {color:#ffcc00; margin:0 10px; text-decoration:none;}
-    <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ8MGE6WVM"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-RQ8MGE6WVM'); </script>
+    /* Ajuste da Logo e Efeitos */
+    header img {
+      max-height: 80px; /* Tamanho reduzido para melhor estética */
+      width: auto;
+      display: block;
+      margin: 0 auto 15px;
+      animation: fadeInZoom 1.5s ease-in-out, pulse 4s infinite ease-in-out;
+    }
+
+    @keyframes fadeInZoom {
+      0% { opacity: 0; transform: scale(0.7); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+
+    header h1 { margin: 10px 0; font-size: 1.8em; max-width: 800px; margin: auto; }
+    
+    .container { 
+      display: flex; 
+      justify-content: space-between; 
+      flex-wrap: wrap; 
+      padding: 40px; 
+      max-width: 1200px; 
+      margin: auto; 
+    }
+
+    .content { flex: 1; min-width: 300px; }
+
+    .form-box { 
+      background: white; 
+      padding: 30px; 
+      border-radius: 8px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+      width: 100%; 
+      max-width: 400px; 
+      margin: 20px auto; 
+    }
+
+    form input {
+      width: 100%; 
+      padding: 12px; 
+      margin: 10px 0; 
+      border: 1px solid #ccc; 
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    form button {
+      width: 100%; 
+      padding: 12px; 
+      background: #005b99; 
+      color: white; 
+      border: none; 
+      border-radius: 4px; 
+      cursor: pointer; 
+      font-weight: bold; 
+      font-size: 1em;
+    }
+
+    form button:hover { background: #004477; }
+
+    .gallery { background: #fff; padding: 40px; max-width: 1200px; margin: 20px auto; border-radius: 8px; }
+    .gallery-grid { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; }
+    .gallery img { max-width: 300px; width: 100%; border-radius: 8px; transition: 0.3s; }
+    .gallery img:hover { transform: translateY(-5px); }
+
+    .benefits, .differentials { background: #fff; padding: 40px; margin: 20px auto; max-width: 1200px; border-radius: 8px; }
+    .benefit-items { display: flex; justify-content: space-around; flex-wrap: wrap; }
+    .benefit { flex: 1; min-width: 250px; padding: 20px; text-align: center; font-weight: bold; }
+
+    .cta-final { background: #005b99; color: white; text-align: center; padding: 60px 20px; }
+    .cta-final button { 
+      padding: 15px 40px; 
+      font-size: 1.2em; 
+      border: none; 
+      border-radius: 5px; 
+      background: #ffcc00; 
+      color: #333; 
+      cursor: pointer; 
+      font-weight: bold; 
+      transition: 0.3s;
+    }
+    .cta-final button:hover { background: #e6b800; transform: scale(1.05); }
+
+    footer { background: #222; color: white; text-align: center; padding: 40px 20px; }
+    footer a { color: #ffcc00; text-decoration: none; margin: 0 10px; }
+    
+    /* Push Up Estilizado */
+    #pushup {
+      display: none; 
+      position: fixed; 
+      bottom: 20px; 
+      right: 20px; 
+      width: 280px; 
+      background: #fff; 
+      border-radius: 12px; 
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4); 
+      padding: 15px; 
+      z-index: 9999;
+      border: 1px solid #eee;
+    }
   </style>
-  </head>
+</head>
 <body>
 
-  <!-- Cabeçalho -->
   <header>
     <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/CLI%20ENGENHARIA-07.png" alt="Logo CLI">
     <h1>Aumente a Confiabilidade dos seus equipamentos com soluções de Lubrificação Industrial sob medida.</h1>
-    <p>Há mais de 10 anos ajudando indústrias a reduzir falhas, aumentar produtividade e economizar custos operacionais.</p>
+    <p>Há mais de 10 anos ajudando indústrias a reduzir falhas e aumentar produtividade.</p>
   </header>
 
-  <!-- Container principal -->
   <div class="container">
-    <div class="content"></div>
+    <div class="content">
+      <section class="gallery">
+        <h2 style="text-align:center;">Conheça nossos Produtos e Serviços</h2>
+        <div class="gallery-grid">
+          <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Lubri%20A%20IA.png" alt="Lubrificador Automático">
+          <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Respiro%20Vertical%20IA.png" alt="Respiros Dessacantes">
+          <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Filtro%20Vertical%20IA.png" alt="Elementos Filtrantes">
+        </div>
+      </section>
+    </div>
 
-<section class="gallery" style="background:#fff; padding:40px; max-width:1200px; margin:auto; border-radius:8px;">
-  <h2 style="text-align:center;">Conheça nossos Produtos e Serviços</h2>
-  <div style="display:flex; flex-wrap:wrap; justify-content:space-around;">
-    <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Lubri%20A%20IA.png" alt="Lubrificador Automático" style="max-width:300px; margin:10px; border-radius:8px;">
-    <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Respiro%20Vertical%20IA.png" alt="Respiros Dessacantes" style="max-width:300px; margin:10px; border-radius:8px;">
-    <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Filtro%20Vertical%20IA.png" alt="Elementos Filtrantes Nacionais, agilidade e qualidade na entrega" style="max-width:300px; margin:10px; border-radius:8px;">
-  </div>
-</div>
-</section>
-
-    <!-- Formulário -->
     <div class="form-box">
-      <h2>Solicite um contato especializado</h2>
+      <h3 style="text-align:center; margin-top:0;">Solicite um contato especializado</h3>
       <form action="https://docs.google.com/forms/d/e/1FAIpQLSdMcjiSddjTUo20uT3bOToisVTo9KaQlFR5LXiM1Ax1LBUizQ/formResponse" method="POST" target="_blank">
-        <input type="text" name="input type="text" class="whsOnd zHQkBf" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-labelledby="i8 i11" aria-describedby="i9 i10" aria-disabled="false" required="" dir="auto" data-initial-dir="auto" data-initial-value=""" placeholder="Nome" required">
-        <button type="submit">Quero ser contatado</button>
+        <input type="text" name="entry.123456789" placeholder="Seu Nome" required> <button type="submit">Quero ser contatado</button>
       </form>
-      <small>Prometemos não enviar spam. Suas informações estão seguras.</small>
+      <p style="font-size: 0.8em; text-align: center; color: #777; margin-top: 10px;">Suas informações estão seguras conosco.</p>
     </div>
   </div>
 
-  <!-- Benefícios -->
   <section class="benefits">
-    <h2>Benefícios</h2>
+    <h2 style="text-align:center;">Benefícios</h2>
     <div class="benefit-items">
       <div class="benefit">💰 Redução de Custos de Manutenção</div>
-      <div class="benefit">✅ Confiabilidade comprovada - Atendemos dezenas de Clientes</div>
-      <div class="benefit">⚙️ Tecnologia de ponta, estamos sempre conectados com o Futuro e a Industria 4.0</div>
+      <div class="benefit">✅ Confiabilidade comprovada</div>
+      <div class="benefit">⚙️ Tecnologia Indústria 4.0</div>
     </div>
   </section>
 
-  <!-- Diferenciais -->
   <section class="differentials">
-    <h2>Nossos Diferenciais</h2>
-    <ul>
-      <li>✅ Equipe técnica altamente capacitada - Profissionais especializados em lubrificação industrial, com conhecimento técnico avançado e foco em resultados.</li>
-
-      <li>🛠️ Soluções personalizadas para cada cliente - Cada operação é única — por isso desenvolvemos estratégias sob medida, alinhadas às necessidades específicas de cada equipamento e ambiente.</li>
-
-      <li>📡 Monitoramento de equipamentos - Tecnologia de ponta para acompanhar o desempenho dos sistemas de lubrificação, garantindo eficiência e prevenção de falhas.</li>
+    <h2 style="text-align:center;">Nossos Diferenciais</h2>
+    <ul style="max-width: 800px; margin: auto; line-height: 1.6;">
+      <li><strong>Equipe técnica altamente capacitada:</strong> Profissionais focados em resultados.</li>
+      <li><strong>Soluções personalizadas:</strong> Estratégias sob medida para sua planta.</li>
+      <li><strong>Monitoramento inteligente:</strong> Prevenção de falhas com tecnologia.</li>
     </ul>
   </section>
 
-  <!-- Chamada final -->
   <section class="cta-final">
     <h2>Garanta mais Confiabilidade para sua operação</h2>
     <form action="https://docs.google.com/forms/d/e/1FAIpQLSdMcjiSddjTUo20uT3bOToisVTo9KaQlFR5LXiM1Ax1LBUizQ/formResponse" method="POST" target="_blank">
@@ -101,51 +190,45 @@
     </form>
   </section>
 
-  <!-- Rodapé -->
   <footer>
-    <p>📞 Telefone: (31) 3939-6282 | 📱 WhatsApp: (31) 97247-6693 | ✉️ Email: charlles.moreira@clisolucoes.com.br</p>
-    <p>📍 Conselheiro Lafaiete MG</p>
-    <p>
-      <a href="https://www.clisolucoes.com.br/">Site</a> | 
-      <a href="https://www.linkedin.com/company/clisolucoes/?viewAsMember=true">LinkedIn</a> | 
-       </p>
-    <div style="text-align:center; margin-top:20px;">
-  <a href="https://wa.me/5531972476693?text=Olá%20CLI%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20de%20lubrificação%20industrial." target="_blank" style="display:inline-block; background:#25D366; color:white; padding:12px 24px; border-radius:5px; font-weight:bold; text-decoration:none; font-size:1em;">
-    💬 Fale pelo WhatsApp
-  </a>
-</div>
+    <p>📞 (31) 3939-6282 | 📱 (31) 97247-6693</p>
+    <p>✉️ charlles.moreira@clisolucoes.com.br</p>
+    <p>📍 Conselheiro Lafaiete - MG</p>
+    <div style="margin: 20px 0;">
+      <a href="https://www.clisolucoes.com.br/">Site Oficial</a> | 
+      <a href="https://www.linkedin.com/company/clisolucoes/">LinkedIn</a>
+    </div>
+    <a href="https://wa.me/5531972476693" target="_blank" style="background:#25D366; color:white; padding:10px 20px; border-radius:5px; font-weight:bold; display:inline-block;">
+      💬 Fale pelo WhatsApp
+    </a>
   </footer>
 
-  <!-- Push Up Produto Novo -->
-  <div id="pushup" style="display:none; position:fixed; bottom:20px; right:20px; width:300px; background:#fff; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.3); padding:15px; z-index:9999;">
+  <div id="pushup">
     <span onclick="document.getElementById('pushup').style.display='none'; sessionStorage.setItem('pushupClosed','true');" 
-          style="position:absolute; top:8px; right:12px; cursor:pointer; font-weight:bold; font-size:18px;">✖</span>
-    <img src="img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/main/WhatsApp%20Image%202026-03-16%20at%2014.34.25.jpeg" alt="Novo Produto" style="width:100%; border-radius:5px; margin-bottom:10px;">
-" alt="Novo Produto" style="width:100%; border-radius:5px; margin-bottom:10px;">
-" alt="Novo Produto" style="width:100%; border-radius:5px; margin-bottom:10px;">
+          style="position:absolute; top:5px; right:10px; cursor:pointer; font-weight:bold; color:#999;">✕</span>
+    
+    <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/main/WhatsApp%20Image%202026-03-16%20at%2014.34.25.jpeg" alt="Novo Produto" style="width:100%; border-radius:5px; margin-bottom:10px;">
+    
+    <p style="font-size:0.9em; margin-bottom:10px; text-align:center;"><strong>Novidade na CLI!</strong> Conheça nossa nova solução.</p>
+    
     <a href="https://wa.me/5531972476693?text=Olá%20CLI%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20novo%20produto." 
        target="_blank" 
-       style="display:block; text-align:center; background:#005b99; color:white; padding:10px; border-radius:5px; font-weight:bold; text-decoration:none;">
-       Fale com um especialista
+       style="display:block; text-align:center; background:#005b99; color:white; padding:10px; border-radius:5px; font-weight:bold; text-decoration:none; font-size:0.9em;">
+       Ver Detalhes
     </a>
   </div>
 
-  <!-- Script para exibir automaticamente uma vez por sessão -->
   <script>
     window.onload = function() {
       if (!sessionStorage.getItem('pushupClosed')) {
         setTimeout(function() {
           document.getElementById('pushup').style.display = 'block';
-        }, 5000); // aparece após 5 segundos
+        }, 3000); // Aparece após 3 segundos
       }
     };
   </script>
 </body>
 </html>
-
-</body>
-</html>
-
 
 
 
