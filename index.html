@@ -20,45 +20,105 @@
       background: url('https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/ImagemdeFundo.png') no-repeat center center fixed; 
       background-size: cover; 
       color: #333;
-      line-height: 1.6;    }
-    /* Cabeçalho */
+      line-height: 1.6;
+    }
+
     header {
       background: rgba(0, 91, 153, 0.95); 
       color: white; 
       padding: 30px 20px; 
-      text-align: center;    }
-    header img {      max-height: 70px;       width: auto;      margin-bottom: 15px;      animation: fadeInZoom 1.2s ease-out, pulse 4s infinite ease-in-out;    }
+      text-align: center;
+    }
 
-    @keyframes fadeInZoom {      0% { opacity: 0; transform: scale(0.8); }      100% { opacity: 1; transform: scale(1); }    }
+    header img {
+      max-height: 70px; 
+      width: auto;
+      margin-bottom: 15px;
+      animation: fadeInZoom 1.2s ease-out, pulse 4s infinite ease-in-out;
+    }
 
-    @keyframes pulse {      0%, 100% { transform: scale(1); }      50% { transform: scale(1.05); }    }
+    @keyframes fadeInZoom {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
 
-    /* Seção de Imagens (Produtos) */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    /* Galeria com Nomes sobrepostos */
     .gallery {
       background: #fff;
       padding: 40px 20px;
       max-width: 1100px;
       margin: 30px auto;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);    }
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
 
     .gallery h2 { text-align: center; color: #005b99; margin-bottom: 30px; }
 
-    .gallery-grid {      display: grid;      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));      gap: 20px;      justify-items: center;    }
-
-    .gallery img {      width: 100%;      max-width: 320px;      border-radius: 8px;      transition: transform 0.3s ease;      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      justify-items: center;
     }
 
-    .gallery img:hover { transform: scale(1.03); }
+    /* Container da imagem para permitir o texto por cima */
+    .product-card {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
 
-    /* Seção do Formulário (Abaixo das imagens) */
+    .product-card img {
+      width: 100%;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Estilo do nome sobre a imagem */
+    .product-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 91, 153, 0.85); /* Azul CLI com transparência */
+      color: white;
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 0.95em;
+      backdrop-filter: blur(2px);
+    }
+
+    /* Formulário */
     .form-section {
       max-width: 1100px;
-      margin: 30px auto;
+      margin: 40px auto;
       display: flex;
-      justify-content: center;    }
+      justify-content: center;
+      padding: 0 20px;
+    }
 
-    .form-box {      background: white;       padding: 40px;       border-radius: 12px;       box-shadow: 0 8px 25px rgba(0,0,0,0.2);       width: 100%;       max-width: 500px;      text-align: center;    }
+    .form-box { 
+      background: white; 
+      padding: 40px; 
+      border-radius: 12px; 
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2); 
+      width: 100%; 
+      max-width: 500px;
+      text-align: center;
+    }
 
     .form-box h2 { color: #005b99; margin-top: 0; }
 
@@ -82,22 +142,10 @@
       cursor: pointer; 
       font-weight: bold; 
       font-size: 1.1em;
-      transition: background 0.3s;
+      transition: 0.3s;
     }
 
-    form button:hover { background: #004477; }
-
-    /* Benefícios e Diferenciais */
-    .info-section {
-      background: #fff; 
-      padding: 40px; 
-      margin: 30px auto; 
-      max-width: 1100px; 
-      border-radius: 12px;
-    }
-
-    .benefit-items { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; }
-    .benefit { flex: 1; min-width: 200px; text-align: center; padding: 15px; font-weight: bold; color: #005b99; }
+    form button:hover { background: #004477; transform: translateY(-2px); }
 
     /* Rodapé */
     footer { background: #222; color: white; text-align: center; padding: 40px 20px; }
@@ -122,54 +170,59 @@
 
   <header>
     <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/CLI%20ENGENHARIA-07.png" alt="Logo CLI">
-    <h1>Confiabilidade em Lubrificação Industrial</h1>
-    <p>Reduza custos e aumente a vida útil dos seus equipamentos com quem entende do assunto.</p>
+    <h1>Soluções em Lubrificação Industrial</h1>
+    <p>Aumente a vida útil de seus ativos com tecnologia e precisão.</p>
   </header>
 
   <section class="gallery">
-    <h2>Nossas Soluções em Destaque</h2>
+    <h2>Nossas Especialidades</h2>
     <div class="gallery-grid">
-      <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Lubri%20A%20IA.png" alt="Lubrificador Automático">
-      <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Respiro%20Vertical%20IA.png" alt="Respiros Dessacantes">
-      <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Filtro%20Vertical%20IA.png" alt="Elementos Filtrantes">
+      
+      <div class="product-card">
+        <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Lubri%20A%20IA.png" alt="Lubrificador Automático">
+        <div class="product-label">Lubrificadores Automáticos</div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Respiro%20Vertical%20IA.png" alt="Respiros Dessacantes">
+        <div class="product-label">Respiros Dessacantes</div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/6facd8453a67a5fc70f59e5c1e9005273b82b1b1/Filtro%20Vertical%20IA.png" alt="Elementos Filtrantes">
+        <div class="product-label">Elementos Filtrantes Nacionais</div>
+      </div>
+
     </div>
   </section>
 
   <section class="form-section">
     <div class="form-box">
-      <h2>Solicite um contato especializado</h2>
-      <p>Nossa equipe técnica entrará em contato para entender sua necessidade.</p>
+      <h2>Solicite um orçamento</h2>
+      <p>Entramos em contato com você o mais rápido possível.</p>
       <form action="https://docs.google.com/forms/d/e/1FAIpQLSdMcjiSddjTUo20uT3bOToisVTo9KaQlFR5LXiM1Ax1LBUizQ/formResponse" method="POST" target="_blank">
         <input type="text" name="entry.123456789" placeholder="Seu nome completo" required>
-        <button type="submit">Quero ser contatado agora</button>
+        <button type="submit">Enviar Solicitação</button>
       </form>
-    </div>
-  </section>
-
-  <section class="info-section">
-    <div class="benefit-items">
-      <div class="benefit">💰 Economia Operacional</div>
-      <div class="benefit">✅ Performance Garantida</div>
-      <div class="benefit">⚙️ Tecnologia 4.0</div>
     </div>
   </section>
 
   <footer>
     <p>📞 (31) 3939-6282 | (31) 97247-6693</p>
-    <p>📍 Conselheiro Lafaiete - MG</p>
     <div style="margin: 20px 0;">
-      <a href="https://wa.me/5531972476693" target="_blank" style="background:#25D366; color:white; padding:12px 20px; border-radius:30px; display:inline-block;">
-        Falar pelo WhatsApp
+      <a href="https://wa.me/5531972476693" target="_blank" style="background:#25D366; color:white; padding:12px 25px; border-radius:30px; display:inline-block; text-decoration:none;">
+        💬 Fale pelo WhatsApp
       </a>
     </div>
+    <p>© 2026 CLI Engenharia - Todos os direitos reservados.</p>
   </footer>
 
   <div id="pushup">
     <span onclick="document.getElementById('pushup').style.display='none'; sessionStorage.setItem('pushupClosed','true');" 
           style="position:absolute; top:5px; right:10px; cursor:pointer; font-weight:bold; color:#999;">✕</span>
     <img src="https://github.com/charllesmoreiracli-cloud/landing-cli1/raw/main/WhatsApp%20Image%202026-03-16%20at%2014.34.25.jpeg" alt="Novo Produto" style="width:100%; border-radius:5px; margin-bottom:10px;">
-    <p style="font-size:0.85em; text-align:center; margin-bottom:10px;">Conheça nossa nova linha de produtos!</p>
-    <a href="https://wa.me/5531972476693" target="_blank" style="display:block; text-align:center; background:#005b99; color:white; padding:10px; border-radius:5px; text-decoration:none; font-weight:bold; font-size:0.9em;">Saiba Mais</a>
+    <p style="font-size:0.85em; text-align:center; margin-bottom:10px;">Confira nossas novidades em filtragem!</p>
+    <a href="https://wa.me/5531972476693" target="_blank" style="display:block; text-align:center; background:#005b99; color:white; padding:10px; border-radius:5px; text-decoration:none; font-weight:bold; font-size:0.9em;">Conversar Agora</a>
   </div>
 
   <script>
@@ -183,12 +236,6 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
 
 
 
